@@ -1,28 +1,68 @@
 /**
  * @file main.cpp
- * @brief This is a test of CMake, doxygen, and GitHub.
+ * @brief This is a quick sorting.
  * @details This is the long brief at the top of main.cpp.
- * @author Seth McNeill
- * @date 1/28/2021
+ * @author Addis Bogale
+ * @date 4/15/2021
  * 
  */
 
 #include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
 
 
-/**
- * Add two integers (brief)
- * 
- * Adds a and b, two integers (long description)
- * @param a integer
- * @param b integer
- * @returns integer sum of a and b
- */
-int add(int a, int b) {
-    return(a + b);
+class Sorting{
+private:
+    vector<int> vect;
+public: 
+    Sorting(vector<int> v){
+        vect = v;
+    }
+
+void quickSort(vector<int> &a) {
+        quickSort(a, 0, a.size());
 }
+void quickSort(vector<int> &a, int i, int n) {
+        if (n <= 1) return;
+        int x = a[i + rand()%n];
+        int p = i-1, j = i, q = i+n;
+        // a[i..p]<x, a[p+1..q-1]??x, a[q..i+n-1]>x
+        while (j < q) {
+            int comp = a[j] - x;
+            if (comp < 0) { // move to beginning of array
+                iter_swap(a.begin() + j++, a.begin() + (++p));
+            } else if (comp > 0) {
+                iter_swap(a.begin() + j,a.begin() + --q); // move to end of array
+            } else {
+                j++; // keep in the middle
+            }
+        }
+        // a[i..p]<x, a[p+1..q-1]=x, a[q..i+n-1]>x
+        quickSort(a, i, p-i+1);
+        quickSort(a, q, n-(q-i));
+}
+
+void printArray(vector<int> c)
+{
+    int i;
+    for (i=0; i < c.size(); i++)
+        printf("%d ", c[i]);
+    printf("\n");
+} 
+};
 
 
 int main(int, char**) {
-    std::cout << "Hello, world! Ver 2.1\n";
+    vector<int> value = {3,8,5,6,9};
+    Sorting test(value);
+    cout << "Sort this vector using quick sort" << endl;
+    test.printArray(value);
+    
+    cout << "Sorted vector" << endl;
+    test.quickSort(value);
+    test.printArray(value);
+    
 }

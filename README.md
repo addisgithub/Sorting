@@ -1,12 +1,9 @@
-# doxygen-cmake-github
-Demonstrates Doxygen html generation and publishing on GitHub Pages. The Doxygen files for this project can be seen [here](https://semcneil.github.io/doxygen-cmake-github/).
+# Quick Sort Program
+1. This program demonstrates how to sort a given vector using a quck sort method.
 
-# How to use
+# References
 1. Point your browser to this repository (https://github.com/semcneil/doxygen-cmake-github)
-2. Press the "Use this template" button
-3. Give your repository a new name
-4. Write a short (one sentence) description of what your project will do
-5. Click the Create repository from template button
+2. https://opendatastructures.org/ods-cpp.pdf
 
 ## VS Code VM Instructions
 1. VS Code needs the following extension added:
@@ -62,11 +59,3 @@ Then in your project's root directory do the following:
     1. The `-a` flag is used to commit all the updated documentation files
     1. VS Code also has git built into it, but the use of branches isn't as easy a workflow as the commandline offers for me (personal opinion).
 
-# References
-1. https://www.doxygen.nl/manual/docblocks.html
-1. https://stackoverflow.com/questions/44212101/cmake-how-to-have-add-custom-command-run-after-all-project-files-are-built
-1. Very useful overview: https://caiorss.github.io/C-Cpp-Notes/Doxygen-documentation.html
-1. https://devblogs.microsoft.com/cppblog/clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake/
-1. https://vicrucann.github.io/tutorials/quick-cmake-doxygen/
-1. https://medium.com/practical-coding/c-documentation-with-doxygen-cmake-sphinx-breathe-for-those-of-use-who-are-totally-lost-7d555386fe13
-1. https://stackoverflow.com/questions/18590445/cmake-custom-command-to-copy-and-rename
