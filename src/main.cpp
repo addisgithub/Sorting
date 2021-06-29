@@ -1,7 +1,6 @@
 /**
  * @file main.cpp
  * @brief This is a quick sorting.
- * @details This is the long brief at the top of main.cpp.
  * @author Addis Bogale
  * @date 4/15/2021
  * 
